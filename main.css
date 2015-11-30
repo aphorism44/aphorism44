@@ -1,0 +1,143 @@
+
+h1 {
+	color: DarkBlue;
+	font-family: Georgia, Times, serif;
+	font-size: 3em;
+	text-align: center;
+}
+
+h2 {
+	color: DarkMagenta;
+	font-family: Georgia, Times, serif;
+	font-size: 1.25em;
+	text-align: center;
+}
+
+p {
+	text-indent: 40px;
+	display: inline;
+}
+
+u {
+    text-decoration: underline;
+}
+
+/* margin: (top)px, (right)px, (bottom)px, (left)px; */
+
+#main, #sidebar {
+	font-family: Arial;
+	display: inline;
+	margin: 50px;
+}
+
+#sidebar {
+	float: right;
+	font-size: .8em;
+	width: 20%;
+	background-color: BurlyWood;
+	overflow: auto;
+}
+
+#comments {
+	float: bottom;
+}
+
+#main {
+	float: left;
+	display: inline;
+	font-size: 1em;
+	width: 50%;
+	overflow: auto;
+}
+
+
+#footer, nav {
+	clear: both;
+	text-align: center;
+}
+
+
+.smaller {
+	font-size: .65em;
+}
+
+
+
+#liMenu a:link, #liMenu a:visited {
+	color: Black;
+	text-decoration: none;
+} 
+
+
+#liMenu {
+	display: inline;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 50px;
+	background-color: DarkSalmon;
+}
+
+#liMenu:hover {
+	background-color: Yellow;
+}
+
+#ulMenu {
+	list-style-type: none;
+}
+
+
+table { 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#commentTable {
+	border-style:dotted solid;
+	border-width:1px;
+}
+
+#responseTableRow {
+	
+}
+
+ul {
+
+ overflow:hidden;
+
+}
+
+img {
+   padding:45px;
+}
+
+/* Life Fractal Styling */
+
+.tabs a span {
+	display: inline-block;
+	border-radius: 5px 5px 0 0;
+	width: 100px;
+	margin-right: 10px;
+	text-align: center;
+	background: #ddd;
+	padding: 5px;
+}
+
+.tabs a span.active {
+	background: #eee;
+}
+
+.keyTable {
+	text-align: left;
+	border-spacing: 25px;
+	float: left;
+}
+
+#fractalBox {
+    text-align: left;
+    margin-left: 10%;
+    width: 50%;
+}
+
+#fractalButtonHolder {
+    text-align: center;
+}

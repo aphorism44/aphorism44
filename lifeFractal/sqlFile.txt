@@ -1,0 +1,42 @@
+CREATE TABLE Fractal_Users (
+	user_id int unsigned auto_increment primary key
+	, username nvarchar(100)
+	, user_pw char(40)
+	, last_modified datetime
+)
+
+CREATE TABLE Fractal_Entries (
+	entry_id int unsigned auto_increment primary key
+	, entry_title nvarchar(100)
+	, entry_text text
+	, entry_date date
+	, user_id int
+	, last_modified datetime
+	, FOREIGN KEY (user_id) REFERENCES Fractal_Users(user_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+CREATE TABLE Fractal_Keywords (
+	keyword_id int unsigned auto_increment primary key
+	, keyword_name nvarchar(400)
+	, user_id int
+	, last_modified datetime
+	, FOREIGN KEY (user_id) REFERENCES Fractal_Users(user_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+CREATE TABLE Fractal_Entry_Keywords (
+	entry_id int
+	, keyword_id int
+	, link_desc text
+	, last_modified datetime
+	, FOREIGN KEY (entry_id) REFERENCES Fractal_Entries(entry_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	, FOREIGN KEY (keyword_id) REFERENCES Fractal_Keywords(keyword_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+CREATE TABLE Fractal_Logins (
+	user_id int
+	, login_datetime datetime
+)
